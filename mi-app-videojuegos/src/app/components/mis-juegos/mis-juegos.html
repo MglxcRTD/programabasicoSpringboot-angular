@@ -1,0 +1,21 @@
+<div class="table-responsive" *ngIf="videojuegos().length > 0">
+  <h3>📋 Mis Videojuegos</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Plataforma</th>
+        <th>Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (juego of videojuegos(); track juego.id) {
+        <tr>
+          <td>{{ juego.nombre }}</td>
+          <td>{{ juego.plataforma }}</td>
+          <td>{{ juego.precio }} €</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

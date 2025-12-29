@@ -1,0 +1,16 @@
+<div class="login-wrapper">
+  <div class="login-card">
+    <h1 style="font-size: 2.5rem; margin-bottom: 10px;"></h1>
+    <h2 style="color: white; margin-bottom: 5px;">Bienvenido</h2>
+    <p style="color: var(--text-secondary); margin-bottom: 30px;">Identifícate para jugar</p>
+    
+    <input type="text" [(ngModel)]="usuarioForm.username" placeholder="Nombre de usuario">
+    <input type="password" [(ngModel)]="usuarioForm.password" placeholder="Contraseña">
+    
+    <button (click)="iniciarSesion()" style="width: 100%; margin-top: 20px;">Entrar al Sistema</button>
+    
+    <p style="margin-top: 20px; font-size: 14px; color: var(--text-secondary);">
+      ¿Eres nuevo? <a routerLink="/registro" style="color: var(--accent-color); text-decoration: none;">Crea una cuenta</a>
+    </p>
+  </div>
+</div>

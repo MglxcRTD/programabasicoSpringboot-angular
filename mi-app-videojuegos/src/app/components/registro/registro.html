@@ -1,0 +1,12 @@
+<div class="login-page">
+  <h2>📝 Crear nueva cuenta</h2>
+  
+  <input type="text" [(ngModel)]="usuarioForm.username" placeholder="Nombre de usuario">
+  <input type="password" [(ngModel)]="usuarioForm.password" placeholder="Contraseña">
+  
+  <div class="buttons">
+    <button (click)="registrarUsuario()" class="btn-confirmar">Registrarme</button>
+  </div>
+  
+  <p>¿Ya tienes cuenta? <a routerLink="/login">Inicia sesión</a></p>
+</div>

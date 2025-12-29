@@ -1,0 +1,28 @@
+<div class="main-container">
+    <h2>Panel de administracion</h2>
+    <p style="color: var(--text-secondary); text-align: center;">Gestion de usuarios y colecciones</p>
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre de Usuario</th>
+                    <th>Rol</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (user of usuarios(); track user.id) {
+                    <tr>
+                        <td>#{{ user.id }}</td>
+                        <td style="color: var(--accent-color); font-weight: bold;">{{ user.username }}</td>
+                        <td><span class="badge">{{ user.rol }}</span></td>
+                        <td>
+                            <button class="btn-accion btn-editar" (click)="verJuegoDeUsuario(user.id)" title="Ver Biblioteca"></button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
